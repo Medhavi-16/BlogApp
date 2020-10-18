@@ -1,18 +1,11 @@
 package com.example.blogappdjangorest.Adapter;
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
-import android.view.View;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.PagerTitleStrip;
-import androidx.viewpager.widget.ViewPager;
 
-import com.example.blogappdjangorest.Fragment.TabBlog;
-import com.example.blogappdjangorest.Fragment.TabSetting;
+import com.example.blogappdjangorest.followernfollowing.Follower;
+import com.example.blogappdjangorest.followernfollowing.Following;
 
 public class Pager extends FragmentStatePagerAdapter {
 
@@ -34,10 +27,10 @@ public class Pager extends FragmentStatePagerAdapter {
         //Returning the current tabs
         switch (position) {
             case 0:
-                TabBlog tab1 = new TabBlog();
+                Follower tab1 = new Follower();
                 return tab1;
             case 1:
-                TabSetting tab2 = new TabSetting();
+                Following tab2 = new Following();
                 return tab2;
             default:
                 return null;
